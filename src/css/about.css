@@ -1,0 +1,67 @@
+.about {
+  padding: var(--section-pad) 0;
+  background: var(--ink);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+}
+
+.about-text {
+  margin-top: 22px;
+  font-size: 1.02rem;
+  max-width: 56ch;
+}
+
+.about-mission {
+  color: var(--ivory);
+}
+
+.about-teaser-link {
+  margin-top: 28px;
+}
+
+.about-note {
+  margin-top: 26px;
+  font-size: 0.78rem;
+  color: var(--gold);
+  border-left: 2px solid var(--gold-dim);
+  padding-left: 14px;
+  max-width: 50ch;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.highlight-card .plaque-inner {
+  padding: 24px 26px;
+}
+
+.highlight-label {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--gold-bright);
+}
+
+.highlight-detail {
+  font-size: 0.85rem;
+  color: var(--ivory-dim);
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

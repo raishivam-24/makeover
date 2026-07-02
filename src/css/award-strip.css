@@ -1,0 +1,34 @@
+.award-strip {
+  background: var(--rose-deep);
+  overflow: hidden;
+  border-top: 1px solid var(--gold-dim);
+  border-bottom: 1px solid var(--gold-dim);
+}
+
+.strip-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-strip 34s linear infinite;
+}
+
+@keyframes scroll-strip {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.strip-item {
+  flex-shrink: 0;
+  padding: 12px 40px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ivory);
+  white-space: nowrap;
+  border-right: 1px solid rgba(244, 236, 220, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strip-track {
+    animation: none;
+  }
+}

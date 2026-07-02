@@ -1,0 +1,24 @@
+.page-header {
+  padding: 156px 0 56px;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(200, 87, 124, 0.14), transparent 55%),
+    var(--ink);
+  text-align: center;
+  border-bottom: 1px solid var(--gold-dim);
+}
+
+.page-header-inner .ornament {
+  margin: 18px auto 0;
+}
+
+.page-header-lede {
+  max-width: 60ch;
+  margin: 20px auto 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .page-header {
+    padding-top: 128px;
+  }
+}

@@ -1,0 +1,105 @@
+:root {
+  /* Colour */
+  --ink: #0c0a08;
+  --ink-soft: #17130f;
+  --ink-panel: #1d1712;
+  --gold: #c9a15b;
+  --gold-bright: #ecce90;
+  --gold-dim: rgba(201, 161, 91, 0.28);
+  --rose: #c8577c;
+  --rose-deep: #8f3856;
+  --ivory: #f4ecdc;
+  --ivory-dim: #b6a98f;
+
+  /* Type */
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Jost", sans-serif;
+  --font-script: "Mrs Saint Delafield", cursive;
+
+  /* Layout */
+  --max-width: 1180px;
+  --section-pad: clamp(64px, 9vw, 128px);
+  --radius: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--ivory);
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--ivory-dim);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1.15;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}

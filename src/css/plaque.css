@@ -1,0 +1,25 @@
+.plaque {
+  position: relative;
+  border: 1px solid var(--gold-dim);
+  background: linear-gradient(160deg, var(--ink-panel), var(--ink-soft));
+  padding: 2px;
+}
+
+.plaque-inner {
+  border: 1px solid rgba(201, 161, 91, 0.14);
+  padding: 32px 28px;
+  height: 100%;
+}
+
+.plaque-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--gold);
+  z-index: 1;
+}
+
+.plaque-corner.tl { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.plaque-corner.tr { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+.plaque-corner.bl { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+.plaque-corner.br { bottom: -1px; right: -1px; border-left: none; border-top: none; }

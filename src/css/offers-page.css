@@ -1,0 +1,10 @@
+.offers-page {
+  padding: var(--section-pad) 0;
+  background: var(--ink);
+}
+
+.offers-page-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}

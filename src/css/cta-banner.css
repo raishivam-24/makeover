@@ -1,0 +1,32 @@
+.cta-banner {
+  padding: 64px 0;
+  background: var(--ink);
+}
+
+.cta-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  border: 1px solid var(--gold-dim);
+  padding: 40px 48px;
+  background: linear-gradient(120deg, var(--ink-panel), var(--ink-soft));
+}
+
+.cta-banner-title {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  margin-top: 8px;
+}
+
+.cta-banner-lede {
+  margin-top: 8px;
+  max-width: 48ch;
+}
+
+@media (max-width: 700px) {
+  .cta-banner-inner {
+    padding: 32px;
+  }
+}

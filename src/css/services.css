@@ -1,0 +1,104 @@
+.services {
+  padding: var(--section-pad) 0;
+  background: var(--ink-soft);
+  border-top: 1px solid var(--gold-dim);
+  border-bottom: 1px solid var(--gold-dim);
+}
+
+.services-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-heading .ornament {
+  margin: 18px auto 0;
+}
+
+.services-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 46px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  color: var(--ivory-dim);
+  padding: 10px 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--gold);
+  color: var(--ivory);
+}
+
+.tab-btn.is-active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.services-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px 56px;
+}
+
+.service-group-title {
+  font-size: 1.1rem;
+  color: var(--rose);
+  font-family: var(--font-display);
+  font-style: italic;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gold-dim);
+}
+
+.service-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.92rem;
+}
+
+.service-name {
+  color: var(--ivory);
+  flex-shrink: 0;
+}
+
+.service-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--gold-dim);
+  height: 0;
+  transform: translateY(-4px);
+}
+
+.service-price {
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.services-note {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 0.78rem;
+  color: var(--ivory-dim);
+}

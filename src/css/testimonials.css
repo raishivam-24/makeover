@@ -1,0 +1,44 @@
+.testimonials {
+  padding: var(--section-pad) 0;
+  background: var(--ink);
+}
+
+.testimonial-grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card .plaque-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.testimonial-stars {
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.testimonial-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--ivory);
+  flex: 1;
+}
+
+.testimonial-name {
+  font-size: 0.75rem;
+  color: var(--ivory-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 860px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
