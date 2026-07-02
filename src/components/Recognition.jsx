@@ -1,5 +1,4 @@
 import award1 from "../assets/images/award-1.jpg";
-import award2 from "../assets/images/award-2.jpg";
 import Ornament from "./Ornament.jsx";
 import Plaque from "./Plaque.jsx";
 import { award } from "../data/siteData.js";
@@ -24,7 +23,6 @@ export default function Recognition() {
 
         <div className="recognition-photos">
           <img src={award1} alt="Renu Rani receiving the Best Make-up Artist award on stage" />
-          <img src={award2} alt="Renu Rani being felicitated at the Beauty Expo & Fashion Runway Show" />
         </div>
       </div>
     </section>
