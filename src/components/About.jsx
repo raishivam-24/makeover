@@ -1,4 +1,5 @@
 import Plaque from "./Plaque.jsx";
+import signboard from "../assets/images/salon-signboard.jpg";
 import { about } from "../data/siteData.js";
 import "../css/about.css";
 
@@ -17,6 +18,9 @@ export default function About() {
         </div>
 
         <div className="about-highlights">
+          <div className="about-signboard">
+            <img src={signboard} alt="RR Makeup Studio & Beauty Salon illuminated signboard" />
+          </div>
           {about.highlights.map((h) => (
             <Plaque key={h.label} className="highlight-card">
               <span className="highlight-label">{h.label}</span>

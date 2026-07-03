@@ -46,8 +46,8 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
-          
-          <a className="nav-cta"
+          <a
+            className="nav-cta"
             href={`https://wa.me/91${business.whatsapp}`}
             target="_blank"
             rel="noreferrer"

@@ -285,10 +285,15 @@ export const testimonials = [
   },
 ];
 
-export const portfolioPlaceholders = Array.from({ length: 7 }).map((_, i) => ({
-  id: `portfolio-slot-${i + 2}`,
-  label: "Portfolio photo needed",
-}));
+export const portfolioPlaceholders = [
+  { id: "portfolio-slot-waiting", label: "Waiting Area photo needed" },
+  { id: "portfolio-slot-products", label: "Product Display photo needed" },
+  { id: "portfolio-slot-full-salon", label: "Full Salon View photo needed" },
+  { id: "portfolio-slot-team", label: "Team photo needed" },
+  { id: "portfolio-slot-bridal-room", label: "Bridal Room (styled) photo needed" },
+  { id: "portfolio-slot-work-1", label: "Portfolio photo needed" },
+  { id: "portfolio-slot-work-2", label: "Portfolio photo needed" },
+];
 
 export const galleryNeeds = [
   { category: "Hero Banner Images", qty: "3–5" },

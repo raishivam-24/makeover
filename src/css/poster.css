@@ -1,0 +1,63 @@
+.poster {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--gold-dim);
+  background: linear-gradient(160deg, var(--ink-panel), var(--ink-soft));
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.poster:hover img {
+  transform: scale(1.02);
+}
+
+.poster-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--gold);
+  z-index: 2;
+}
+
+.poster-corner.tl { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+.poster-corner.tr { top: 6px; right: 6px; border-left: none; border-bottom: none; }
+.poster-corner.bl { bottom: 6px; left: 6px; border-right: none; border-top: none; }
+.poster-corner.br { bottom: 6px; right: 6px; border-left: none; border-top: none; }
+
+.poster-zoom {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translate(-50%, 8px);
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  font-weight: 600;
+}
+
+.poster:hover .poster-zoom {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.poster-caption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ivory-dim);
+}

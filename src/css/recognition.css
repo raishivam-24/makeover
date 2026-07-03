@@ -57,14 +57,4 @@
   .recognition-grid {
     grid-template-columns: 1fr;
   }
-
-  .recognition-photos {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .recognition-photos img {
-    width: min(320px, 100%);
-    height: auto;
-  }
 }

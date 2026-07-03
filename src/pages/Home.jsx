@@ -1,7 +1,6 @@
 import Hero from "../components/Hero.jsx";
 import AwardStrip from "../components/AwardStrip.jsx";
 import AboutTeaser from "../components/AboutTeaser.jsx";
-import PromoPosters from "../components/PromoPosters.jsx";
 import OffersTeaser from "../components/OffersTeaser.jsx";
 import CtaBanner from "../components/CtaBanner.jsx";
 import Testimonials from "../components/Testimonials.jsx";
@@ -12,7 +11,6 @@ export default function Home() {
       <Hero />
       <AwardStrip />
       <AboutTeaser />
-      <PromoPosters />
       <OffersTeaser />
       <CtaBanner
         eyebrow="Full Menu"
