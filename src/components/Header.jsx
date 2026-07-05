@@ -5,11 +5,11 @@ import "../css/header.css";
 
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
   { href: "#offers", label: "Offers" },
   { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
   { href: "#gallery", label: "Gallery" },
-  // { href: "#testimonials", label: "Reviews" },
+  { href: "#testimonials", label: "Reviews" },
   { href: "#contact", label: "Visit" },
 ];
 

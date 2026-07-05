@@ -3,12 +3,13 @@
   background: var(--ink-soft);
 }
 
-/* .gallery-note {
+.gallery-note {
+  display: none;
   max-width: 52ch;
   margin: 18px auto 0;
   font-size: 0.82rem;
   text-align: center;
-} */
+}
 
 .gallery-category {
   margin-top: 44px;

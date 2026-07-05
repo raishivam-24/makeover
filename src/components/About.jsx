@@ -10,7 +10,7 @@ export default function About() {
       <div className="container">
         <OwnerProfileCard />
       </div>
-      {/* <div className="container about-grid">
+      <div className="container about-grid">
         <div className="about-copy">
           <p className="about-text">{about.intro}</p>
           <p className="about-text about-mission">{about.mission}</p>
@@ -32,7 +32,7 @@ export default function About() {
             </Plaque>
           ))}
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

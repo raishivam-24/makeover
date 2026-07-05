@@ -6,6 +6,7 @@ import "../css/offers.css";
 export default function Offers() {
   return (
     <div className="offers-section">
+      {/* Real promo graphics, click to enlarge */}
       <div className="container offers-poster-grid">
         <div className="offers-poster-cell">
           <Poster

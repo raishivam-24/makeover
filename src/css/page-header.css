@@ -15,6 +15,11 @@
   margin: 20px auto 0;
   font-size: 1rem;
 }
-/* #gallery .page-header{
+
+#gallery .page-header-lede {
   display: none;
-} */
+}
+
+#gallery .page-header {
+  display: none;
+}

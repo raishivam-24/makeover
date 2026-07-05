@@ -3,7 +3,7 @@
   background: var(--ink);
 }
 
-/*.about-grid {
+.about-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 64px;
@@ -24,6 +24,7 @@
 }
 
 .about-note {
+  display: none;
   margin-top: 26px;
   font-size: 0.78rem;
   color: var(--gold);
@@ -70,7 +71,7 @@
 .highlight-detail {
   font-size: 0.85rem;
   color: var(--ivory-dim);
-} */
+}
 
 @media (max-width: 860px) {
   .about-grid {

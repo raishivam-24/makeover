@@ -67,7 +67,7 @@ export default function App() {
           <About />
           <Recognition />
         </section>
-
+        
         <section id="gallery">
           <PageHeader
             eyebrow="Portfolio"
