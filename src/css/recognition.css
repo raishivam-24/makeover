@@ -39,22 +39,28 @@
 }
 
 .recognition-photos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
 
 .recognition-photos img {
   width: 100%;
-  max-width: 650px;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   border: 1px solid var(--gold-dim);
-  border-radius: 10px;
+}
+
+.recognition-photos img:nth-child(2) {
+  margin-top: 32px;
 }
 
 @media (max-width: 860px) {
   .recognition-grid {
     grid-template-columns: 1fr;
+  }
+  .recognition-photos img:nth-child(2) {
+    margin-top: 0;
   }
 }

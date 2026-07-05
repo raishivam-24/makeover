@@ -1,3 +1,4 @@
+import AppointmentForm from "./AppointmentForm.jsx";
 import { business } from "../data/siteData.js";
 import "../css/contact.css";
 
@@ -61,7 +62,11 @@ export default function ContactLocation() {
           </a>
         </div>
 
-        <div className="contact-map">
+        <AppointmentForm />
+      </div>
+
+      <div className="container">
+        <div className="contact-map contact-map--full">
           <iframe
             title="RR Makeup Studio & Academy location"
             src={mapSrc}

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { business } from "../data/siteData.js";
 import "../css/footer.css";
@@ -16,11 +15,12 @@ export default function Footer() {
         </div>
 
         <nav className="footer-links" aria-label="Footer">
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/offers">Offers</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/contact">Visit</Link>
+          <a href="#about">About</a>
+          <a href="#offers">Offers</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Visit</a>
           <a href={business.instagram} target="_blank" rel="noreferrer">
             Instagram
           </a>

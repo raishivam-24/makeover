@@ -3,15 +3,32 @@
   background: var(--ink-soft);
 }
 
-.gallery-note {
+/* .gallery-note {
   max-width: 52ch;
   margin: 18px auto 0;
   font-size: 0.82rem;
   text-align: center;
+} */
+
+.gallery-category {
+  margin-top: 44px;
+}
+
+.gallery-category:first-of-type {
+  margin-top: 40px;
+}
+
+.gallery-category-title {
+  font-size: 1.15rem;
+  color: var(--rose);
+  font-family: var(--font-display);
+  font-style: italic;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gold-dim);
 }
 
 .gallery-grid {
-  margin-top: 44px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;

@@ -1,0 +1,56 @@
+.appointment-form {
+  border: 1px solid var(--gold-dim);
+  background: linear-gradient(160deg, var(--ink-panel), var(--ink-soft));
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appointment-form-title {
+  font-size: 1.4rem;
+}
+
+.appointment-form-note {
+  font-size: 0.78rem;
+  margin-top: -8px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  background: var(--ink);
+  border: 1px solid var(--gold-dim);
+  color: var(--ivory);
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border-radius: var(--radius);
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.appointment-form-submit {
+  margin-top: 8px;
+  justify-content: center;
+  border: none;
+}

@@ -8,7 +8,8 @@
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 56px;
-  align-items: stretch;
+  align-items: start;
+  margin-bottom: 48px;
 }
 
 .contact-list {
@@ -73,6 +74,10 @@
   min-height: 340px;
   border: 0;
   filter: grayscale(0.25) contrast(1.05);
+}
+
+.contact-map--full {
+  min-height: 380px;
 }
 
 @media (max-width: 860px) {

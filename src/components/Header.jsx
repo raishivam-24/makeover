@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { business } from "../data/siteData.js";
 import "../css/header.css";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/offers", label: "Offers" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Visit" },
+  { href: "#home", label: "Home" },
+  { href: "#offers", label: "Offers" },
+  { href: "#services", label: "Services" },
+  { href: "#about", label: "About" },
+  { href: "#gallery", label: "Gallery" },
+  // { href: "#testimonials", label: "Reviews" },
+  { href: "#contact", label: "Visit" },
 ];
+
+const SECTION_IDS = NAV_LINKS.map((l) => l.href.slice(1));
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState("home");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -23,28 +26,46 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(Boolean);
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container header-row">
-        <Link to="/" className="brand" onClick={() => setOpen(false)}>
+        <a href="#home" className="brand" onClick={() => setOpen(false)}>
           <img src={logo} alt={`${business.studioName} crest`} className="brand-mark" />
           <span className="brand-text">
             <span className="brand-name">{business.brandName}</span>
             <span className="brand-sub">{business.studioName}</span>
           </span>
-        </Link>
+        </a>
 
         <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Primary">
           {NAV_LINKS.map((link) => (
-            <NavLink
+            <a
               key={link.href}
-              to={link.href}
-              end={link.href === "/"}
+              href={link.href}
               onClick={() => setOpen(false)}
-              className={({ isActive }) => (isActive ? "is-active-link" : "")}
+              className={activeId === link.href.slice(1) ? "is-active-link" : ""}
             >
               {link.label}
-            </NavLink>
+            </a>
           ))}
           <a
             className="nav-cta"

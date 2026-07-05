@@ -2,6 +2,30 @@
 // Sourced from: client price-list, award photographs, and the client requirements PDF.
 // Fields marked (placeholder) are written to be replaced once the client supplies real copy.
 
+export const stats = [
+  { value: "500+", label: "Clients Styled" },
+  { value: "10+", label: "Years Experience" },
+  { value: "Award-Winning", label: "Makeup Artistry" },
+];
+
+export const ownerProfile = {
+  badge: "Celebrity Makeup Artist",
+  role: "Founder & Head Artist",
+  quote:
+    "Every face tells a different story. My job isn't to change it — it's to bring out what's already beautiful, with technique, patience, and a little bit of magic.",
+  specialties: ["Bridal Makeup", "Hair Styling", "Skin Treatments", "Academy Training"],
+};
+
+export const appointmentServices = [
+  "Bridal Makeup",
+  "Party Makeup",
+  "Hair Styling / Spa",
+  "Facial / Skin Treatment",
+  "Waxing",
+  "Grand Opening Offer",
+  "Other",
+];
+
 export const business = {
   brandName: "Makeover by Renu Rani",
   studioName: "RR Makeup Studio & Academy",

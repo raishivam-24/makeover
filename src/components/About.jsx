@@ -1,4 +1,5 @@
 import Plaque from "./Plaque.jsx";
+import OwnerProfileCard from "./OwnerProfileCard.jsx";
 import signboard from "../assets/images/salon-signboard.jpg";
 import { about } from "../data/siteData.js";
 import "../css/about.css";
@@ -6,7 +7,10 @@ import "../css/about.css";
 export default function About() {
   return (
     <section className="about">
-      <div className="container about-grid">
+      <div className="container">
+        <OwnerProfileCard />
+      </div>
+      {/* <div className="container about-grid">
         <div className="about-copy">
           <p className="about-text">{about.intro}</p>
           <p className="about-text about-mission">{about.mission}</p>
@@ -28,7 +32,7 @@ export default function About() {
             </Plaque>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
