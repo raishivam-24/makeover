@@ -1,20 +1,17 @@
 import { useState } from "react";
-import { business, appointmentServices } from "../data/siteData.js";
+import { business } from "../data/siteData.js";
+import { appointmentServices } from "../data/contact.js";
 import "../css/appointment-form.css";
 
-const initialState = { name: "", phone: "", service: appointmentServices[0], date: "", message: "" };
+const initial = { name: "", phone: "", service: appointmentServices[0], date: "", message: "" };
 
 export default function AppointmentForm() {
-  const [form, setForm] = useState(initialState);
+  const [form, setForm] = useState(initial);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }));
-  };
+  const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const lines = [
       "Hi RR Makeup Studio, I'd like to book an appointment.",
       `Name: ${form.name}`,
@@ -23,7 +20,6 @@ export default function AppointmentForm() {
       form.date ? `Preferred date: ${form.date}` : null,
       form.message ? `Message: ${form.message}` : null,
     ].filter(Boolean);
-
     const text = encodeURIComponent(lines.join("\n"));
     window.open(`https://wa.me/91${business.whatsapp}?text=${text}`, "_blank", "noreferrer");
   };
@@ -43,9 +39,9 @@ export default function AppointmentForm() {
           name="name"
           type="text"
           required
+          placeholder="Your name"
           value={form.name}
           onChange={handleChange}
-          placeholder="Your name"
         />
       </div>
 
@@ -56,9 +52,9 @@ export default function AppointmentForm() {
           name="phone"
           type="tel"
           required
+          placeholder="10-digit mobile number"
           value={form.phone}
           onChange={handleChange}
-          placeholder="10-digit mobile number"
         />
       </div>
 
@@ -84,9 +80,9 @@ export default function AppointmentForm() {
           id="af-message"
           name="message"
           rows="3"
+          placeholder="Anything specific we should know?"
           value={form.message}
           onChange={handleChange}
-          placeholder="Anything specific we should know?"
         />
       </div>
 

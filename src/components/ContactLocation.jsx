@@ -1,11 +1,10 @@
 import AppointmentForm from "./AppointmentForm.jsx";
 import { business } from "../data/siteData.js";
+import { contact } from "../data/contact.js";
 import "../css/contact.css";
 
 export default function ContactLocation() {
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-    business.mapsQuery
-  )}&output=embed`;
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(contact.mapsQuery)}&output=embed`;
 
   return (
     <section className="contact">
@@ -15,15 +14,15 @@ export default function ContactLocation() {
             <div className="contact-row">
               <dt>Address</dt>
               <dd>
-                {business.address.line1}, {business.address.line2}
+                {contact.address.line1}
                 <br />
-                {business.address.city}
+                {contact.address.line2}
               </dd>
             </div>
             <div className="contact-row">
               <dt>Phone</dt>
               <dd>
-                {business.phones.map((p) => (
+                {contact.phones.map((p) => (
                   <a key={p} href={`tel:+91${p}`} className="contact-link">
                     {p}
                   </a>
@@ -37,12 +36,12 @@ export default function ContactLocation() {
                   @makeover_by_renurani
                 </a>
                 <a
-                  href={business.instagramSecondary.url}
+                  href={contact.instagramSecondary.url}
                   target="_blank"
                   rel="noreferrer"
                   className="contact-link contact-link-secondary"
                 >
-                  @{business.instagramSecondary.handle} — {business.instagramSecondary.label}
+                  @{contact.instagramSecondary.handle} — {contact.instagramSecondary.label}
                 </a>
               </dd>
             </div>
@@ -66,13 +65,8 @@ export default function ContactLocation() {
       </div>
 
       <div className="container">
-        <div className="contact-map contact-map--full">
-          <iframe
-            title="RR Makeup Studio & Academy location"
-            src={mapSrc}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div className="contact-map">
+          <iframe title="RR Makeup Studio & Academy location" src={mapSrc} loading="lazy" />
         </div>
       </div>
     </section>

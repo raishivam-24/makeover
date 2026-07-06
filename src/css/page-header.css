@@ -1,25 +1,14 @@
 .page-header {
-  padding: var(--section-pad) 0 48px;
-  background:
-    radial-gradient(ellipse at 85% 0%, rgba(200, 87, 124, 0.14), transparent 55%),
-    var(--ink);
+  padding: var(--section-pad) 0 40px;
   text-align: center;
 }
 
 .page-header-inner .ornament {
-  margin: 18px auto 0;
+  margin: 16px auto 0;
 }
 
 .page-header-lede {
-  max-width: 60ch;
-  margin: 20px auto 0;
-  font-size: 1rem;
-}
-
-#gallery .page-header-lede {
-  display: none;
-}
-
-#gallery .page-header {
-  display: none;
+  max-width: 55ch;
+  margin: 18px auto 0;
+  font-size: 0.98rem;
 }

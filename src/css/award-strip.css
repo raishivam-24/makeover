@@ -1,8 +1,8 @@
 .award-strip {
-  background: var(--rose-deep);
+  background: var(--rose);
   overflow: hidden;
-  border-top: 1px solid var(--gold-dim);
-  border-bottom: 1px solid var(--gold-dim);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .strip-track {
@@ -22,9 +22,9 @@
   font-family: var(--font-display);
   font-style: italic;
   font-size: 0.95rem;
-  color: var(--ivory);
+  color: var(--cream);
   white-space: nowrap;
-  border-right: 1px solid rgba(244, 236, 220, 0.2);
+  border-right: 1px solid rgba(245, 237, 228, 0.35);
 }
 
 @media (prefers-reduced-motion: reduce) {

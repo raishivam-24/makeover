@@ -1,36 +1,56 @@
-import Plaque from "./Plaque.jsx";
-import OwnerProfileCard from "./OwnerProfileCard.jsx";
-import signboard from "../assets/images/salon-signboard.jpg";
-import { about } from "../data/siteData.js";
+import signboard from "../assets/images/about-signboard.jpg";
+import awardPhoto from "../assets/images/about-award.jpg";
+import Ornament from "./Ornament.jsx";
+import { about, award, business } from "../data/siteData.js";
 import "../css/about.css";
 
 export default function About() {
   return (
-    <section className="about">
-      <div className="container">
-        <OwnerProfileCard />
-      </div>
+    <section id="about" className="about">
       <div className="container about-grid">
-        <div className="about-copy">
-          <p className="about-text">{about.intro}</p>
-          <p className="about-text about-mission">{about.mission}</p>
-          <p className="about-note">
-            Note for the client: this introduction is placeholder copy drafted to match your
-            studio's tone — swap in your real story, founding year and mission whenever it's
-            ready.
-          </p>
+        <div className="about-photos">
+          <img src={awardPhoto} alt="" className="about-photo about-photo-main" />
+          <img src={signboard} alt="" className="about-photo about-photo-small" />
         </div>
 
-        <div className="about-highlights">
-          <div className="about-signboard">
-            <img src={signboard} alt="RR Makeup Studio & Beauty Salon illuminated signboard" />
+        <div className="about-copy">
+          <p className="eyebrow">{about.eyebrow}</p>
+          <h2 className="section-heading">{business.ownerName}</h2>
+          <p className="about-role">{business.ownerTitle}</p>
+          <p className="about-line">{about.line}</p>
+
+          <blockquote className="about-quote">“{about.quote}”</blockquote>
+
+          <div className="about-tags">
+            {about.tags.map((tag) => (
+              <span className="about-tag" key={tag}>
+                {tag}
+              </span>
+            ))}
           </div>
-          {about.highlights.map((h) => (
-            <Plaque key={h.label} className="highlight-card">
-              <span className="highlight-label">{h.label}</span>
-              <span className="highlight-detail">{h.detail}</span>
-            </Plaque>
-          ))}
+
+          <a className="about-cta"
+            href={`https://wa.me/91${business.whatsapp}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Book an Appointment
+          </a>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="recognition">
+          <p className="eyebrow">{award.eyebrow}</p>
+          <h3 className="recognition-title">{award.title}</h3>
+          <Ornament />
+          <div className="recognition-card">
+            <p className="recognition-event">{award.event}</p>
+            <p className="recognition-meta">
+              {award.date} · {award.location}
+            </p>
+            <p className="recognition-presenter">Presented by {award.presenter}</p>
+          </div>
         </div>
       </div>
     </section>

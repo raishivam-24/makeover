@@ -1,15 +1,14 @@
 .site-footer {
-  background: var(--ink);
-  border-top: 1px solid var(--gold-dim);
-  padding: 44px 0;
+  background: var(--charcoal);
+  padding: 32px 0;
 }
 
 .footer-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 28px;
   flex-wrap: wrap;
-  gap: 24px;
 }
 
 .footer-brand {
@@ -18,50 +17,54 @@
   gap: 12px;
 }
 
-.footer-brand img {
+.footer-logo {
   width: 34px;
   height: 34px;
-  object-fit: contain;
+  border-radius: 50%;
 }
 
-.footer-brand-name {
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-display);
-  color: var(--ivory);
   font-size: 0.95rem;
-  margin: 0;
+  color: var(--cream);
+  line-height: 1.3;
 }
 
 .footer-brand-sub {
-  font-size: 0.62rem;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--gold);
-  margin: 0;
+  font-weight: 500;
 }
 
 .footer-links {
   display: flex;
-  gap: 22px;
   flex-wrap: wrap;
-  font-size: 0.8rem;
-  color: var(--ivory-dim);
+  gap: 20px;
+  font-size: 0.82rem;
+  color: rgba(245, 237, 228, 0.75);
 }
 
 .footer-links a:hover {
-  color: var(--gold-bright);
+  color: var(--blush);
 }
 
 .footer-copy {
   font-size: 0.72rem;
-  color: var(--ivory-dim);
-  width: 100%;
-  text-align: center;
-  margin-top: 8px;
+  color: rgba(245, 237, 228, 0.5);
+  white-space: nowrap;
 }
 
-@media (min-width: 700px) {
+@media (max-width: 860px) {
+  .footer-row {
+    justify-content: center;
+    text-align: center;
+  }
   .footer-copy {
-    width: auto;
-    margin-top: 0;
+    width: 100%;
+    text-align: center;
   }
 }

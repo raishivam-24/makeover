@@ -1,162 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
 .hero {
-  position: relative;
-  padding: 168px 0 96px;
+  background: var(--cream);
+  padding: 90px 0;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 80% -10%, rgba(200, 87, 124, 0.16), transparent 55%),
-    radial-gradient(ellipse at 10% 10%, rgba(201, 161, 91, 0.1), transparent 45%),
-    var(--ink);
 }
 
-.hero-grid {
+.hero-inner {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 56px;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
   align-items: center;
 }
 
+.eyebrow {
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .hero-title {
-  font-size: clamp(2.6rem, 5.4vw, 4.4rem);
-  line-height: 1.06;
-  margin: 18px 0 22px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 1.15;
+  color: var(--charcoal);
+  margin: 18px 0 26px;
 }
 
 .hero-script {
-  font-family: var(--font-script);
-  font-weight: 400;
+  display: inline-block;
+  font-family: "Caveat", var(--font-display);
+  font-weight: 600;
+  font-size: 1.5em;
   color: var(--rose);
-  font-size: 1.25em;
-  padding: 0 0.08em;
+  line-height: 1;
+  margin-top: 6px;
 }
 
-.hero-lede {
+.hero-tagline {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.3rem;
-  color: var(--ivory);
-  max-width: 30ch;
-  margin: 18px 0 34px;
+  font-size: 1.15rem;
+  color: var(--charcoal-soft);
+  max-width: 42ch;
+  margin-bottom: 30px;
 }
 
 .hero-actions {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  gap: 16px;
+  margin-bottom: 26px;
 }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 15px 28px;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-size: 0.82rem;
+  padding: 16px 34px;
   border-radius: var(--radius);
-  border: 1px solid var(--gold);
-  transition: all 0.25s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
 }
 
 .btn-solid {
   background: var(--gold);
-  color: var(--ink);
+  color: var(--charcoal);
 }
 
 .btn-solid:hover {
-  background: var(--gold-bright);
-  border-color: var(--gold-bright);
+  opacity: 0.85;
 }
 
 .btn-line {
-  color: var(--ivory);
-  border-color: var(--ivory-dim);
+  border: 1px solid var(--charcoal);
+  color: var(--charcoal);
 }
 
 .btn-line:hover {
-  border-color: var(--gold-bright);
-  color: var(--gold-bright);
+  background: var(--white);
 }
 
 .hero-award {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.82rem;
-  color: var(--ivory-dim);
-  padding-top: 22px;
-  border-top: 1px solid var(--gold-dim);
+  font-size: 0.85rem;
+  color: var(--charcoal-soft);
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
   max-width: 46ch;
 }
 
 .hero-award-tag {
-  flex-shrink: 0;
+  display: inline-block;
   color: var(--rose);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
+  margin-right: 10px;
 }
 
-.hero-visual {
+/* ---------- Frame + photo + badge ---------- */
+
+.hero-frame-wrap {
   position: relative;
-  justify-self: center;
+  justify-self: end;
+  width: 100%;
+  max-width: 460px;
 }
 
 .hero-frame {
-  width: min(360px, 100%);
-  aspect-ratio: 3 / 4;
-  border: 1px solid var(--gold-dim);
-  padding: 10px;
-  position: relative;
-}
-
-.hero-frame::before {
-  content: "";
-  position: absolute;
-  inset: -14px;
-  border: 1px solid var(--gold-dim);
-  pointer-events: none;
+  border: 1px solid var(--gold);
+  padding: 12px;
+  background: var(--white);
+  box-shadow: 0 20px 50px rgba(43, 43, 43, 0.15);
 }
 
 .hero-frame img {
+  display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  filter: saturate(1.02) contrast(1.03);
+  object-position: top;
 }
 
-.hero-frame-caption {
+.hero-badge {
   position: absolute;
-  bottom: -22px;
-  right: -18px;
-  background: var(--ink-panel);
-  border: 1px solid var(--gold-dim);
-  padding: 14px 20px;
+  bottom: -26px;
+  right: -20px;
   display: flex;
   align-items: center;
   gap: 10px;
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 14px 22px;
+  box-shadow: 0 16px 40px rgba(43, 43, 43, 0.25);
+}
+
+.hero-badge-initials {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.hero-badge-label {
   font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ivory-dim);
+  white-space: nowrap;
 }
 
-.brand-script {
-  font-family: var(--font-script);
-  font-size: 1.6rem;
-  color: var(--gold-bright);
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-@media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-visual {
-    order: -1;
-  }
+@media (max-width: 860px) {
   .hero {
-    padding-top: 140px;
+    padding: 60px 0;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-frame-wrap {
+    justify-self: center;
+    max-width: 340px;
   }
 }

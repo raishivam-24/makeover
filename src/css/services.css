@@ -1,67 +1,103 @@
 .services {
   padding: var(--section-pad) 0;
-  background: var(--ink-soft);
-  border-top: 1px solid var(--gold-dim);
-  border-bottom: 1px solid var(--gold-dim);
+  background: var(--cream);
 }
 
 .services-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
-.services-heading .ornament {
-  margin: 18px auto 0;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-.services-tabs {
+.service-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 12px 30px rgba(43, 43, 43, 0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.06);
+}
+
+.service-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(43,43,43,0.75), transparent);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.price-list-poster {
+  max-width: 380px;
+  margin: 56px auto 0;
+}
+
+.price-tabs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 46px;
+  margin: 48px 0 40px;
 }
 
-.tab-btn {
+.price-tab-btn {
   background: transparent;
-  border: 1px solid var(--gold-dim);
-  color: var(--ivory-dim);
+  border: 1px solid var(--line);
+  color: var(--charcoal-soft);
   padding: 10px 20px;
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  border-radius: var(--radius);
+  border-radius: 999px;
   transition: all 0.25s ease;
 }
 
-.tab-btn:hover {
-  border-color: var(--gold);
-  color: var(--ivory);
+.price-tab-btn:hover {
+  border-color: var(--rose);
+  color: var(--charcoal);
 }
 
-.tab-btn.is-active {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--ink);
+.price-tab-btn.is-active {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  color: var(--cream);
 }
 
-.services-panel {
+.price-panel {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px 56px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px 48px;
 }
 
-.service-group-title {
-  font-size: 1.1rem;
-  color: var(--rose);
-  font-family: var(--font-display);
+.price-group-title {
+  font-size: 1.05rem;
   font-style: italic;
+  color: var(--rose);
   margin-bottom: 14px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--gold-dim);
+  border-bottom: 1px solid var(--line);
 }
 
-.service-list {
+.price-item-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -70,35 +106,33 @@
   gap: 12px;
 }
 
-.service-item {
+.price-item {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
-.service-name {
-  color: var(--ivory);
+.price-item-name {
+  color: var(--charcoal);
   flex-shrink: 0;
 }
 
-.service-dots {
+.price-item-dots {
   flex: 1;
-  border-bottom: 1px dotted var(--gold-dim);
-  height: 0;
+  border-bottom: 1px dotted var(--line);
   transform: translateY(-4px);
 }
 
-.service-price {
-  color: var(--gold-bright);
+.price-item-value {
   font-family: var(--font-display);
   font-weight: 600;
+  color: var(--gold);
   flex-shrink: 0;
 }
 
-.services-note {
-  text-align: center;
-  margin-top: 48px;
-  font-size: 0.78rem;
-  color: var(--ivory-dim);
+@media (max-width: 860px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

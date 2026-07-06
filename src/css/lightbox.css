@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(6, 5, 4, 0.92);
+  background: rgba(43, 43, 43, 0.85);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -19,10 +19,8 @@
 .lightbox-img {
   max-width: min(560px, 90vw);
   max-height: 88vh;
-  width: auto;
-  height: auto;
-  border: 1px solid var(--gold-dim);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .lightbox-close {
@@ -31,18 +29,16 @@
   right: 24px;
   width: 42px;
   height: 42px;
-  border: 1px solid var(--gold-dim);
-  background: var(--ink-panel);
-  color: var(--ivory);
+  border: none;
+  background: var(--white);
+  color: var(--charcoal);
   font-size: 1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .lightbox-close:hover {
-  border-color: var(--gold);
-  color: var(--gold-bright);
+  background: var(--blush);
 }

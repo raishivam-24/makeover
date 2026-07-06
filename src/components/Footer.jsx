@@ -2,29 +2,37 @@ import logo from "../assets/images/logo.png";
 import { business } from "../data/siteData.js";
 import "../css/footer.css";
 
+const LINKS = [
+  { href: "#about", label: "About" },
+  { href: "#offers", label: "Offers" },
+  { href: "#services", label: "Services" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#reviews", label: "Reviews" },
+  { href: "#contact", label: "Visit" },
+];
+
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-row">
-        <div className="footer-brand">
-          <img src={logo} alt={`${business.studioName} crest`} />
-          <div>
-            <p className="footer-brand-name">{business.brandName}</p>
-            <p className="footer-brand-sub">{business.studioName}</p>
-          </div>
-        </div>
+        <a href="#home" className="footer-brand">
+          <img src={logo} alt="" className="footer-logo" />
+          <span className="footer-brand-text">
+            {business.brandName}
+            <span className="footer-brand-sub">{business.studioName}</span>
+          </span>
+        </a>
 
-        <nav className="footer-links" aria-label="Footer">
-          <a href="#about">About</a>
-          <a href="#offers">Offers</a>
-          <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#testimonials">Reviews</a>
-          <a href="#contact">Visit</a>
+        <nav className="footer-links">
+          {LINKS.map((l) => (
+            <a key={l.href} href={l.href}>
+              {l.label}
+            </a>
+          ))}
           <a href={business.instagram} target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href={business.instagramSecondary.url} target="_blank" rel="noreferrer">
+          <a href={business.instagramLehenga} target="_blank" rel="noreferrer">
             Lehenga Studio
           </a>
         </nav>

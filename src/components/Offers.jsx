@@ -1,28 +1,32 @@
-import Poster from "./Poster.jsx";
 import grandOpeningPoster from "../assets/images/poster-grand-opening.jpg";
-import packagesPoster from "../assets/images/poster-packages.jpg";
+import haircutOfferPoster from "../assets/images/poster-haircut-offer.jpg";
+import PageHeader from "./PageHeader.jsx";
+import Poster from "./Poster.jsx";
 import "../css/offers.css";
 
 export default function Offers() {
   return (
-    <div className="offers-section">
-      {/* Real promo graphics, click to enlarge */}
-      <div className="container offers-poster-grid">
-        <div className="offers-poster-cell">
+    <section id="offers" className="offers">
+      <PageHeader
+        eyebrow="Current Offers"
+        title="Limited-Time Deals"
+        lede="Grand opening pricing on hair treatments, a flat-rate haircut offer, and three ready-made service packages."
+      />
+
+      <div className="container">
+        <div className="offers-grid">
           <Poster
             src={grandOpeningPoster}
-            alt="Grand Opening Offer — any hair length just ₹2999"
+            alt="Grand Opening Offer — any hair length just ₹2999, choose any one hair treatment"
             caption="Grand Opening Offer — tap to view full size"
           />
-        </div>
-        <div className="offers-poster-cell">
           <Poster
-            src={packagesPoster}
-            alt="Hair cut offer and Silver, Gold, Diamond packages"
-            caption="Haircut Offer & Packages — tap to view full size"
+            src={haircutOfferPoster}
+            alt="Hair cut offer ₹99 and Silver, Gold, Diamond package pricing with Renu Rani"
+            caption="Haircut & Packages — tap to view full size"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,24 +1,27 @@
-import portfolioShot from "../assets/images/portfolio-1.jpg";
-import Ornament from "./Ornament.jsx";
-import { business, award } from "../data/siteData.js";
+import ownerPhoto from "../assets/images/owner-photo.jpg";
+import heroVideo from "../assets/videos/hero-video.mp4";
+import { business, hero, award } from "../data/siteData.js";
 import "../css/hero.css";
 
 export default function Hero() {
   return (
-    <section id="top" className="hero">
-      <div className="container hero-grid">
+    <section id="home" className="hero">
+      <div className="hero-bg" aria-hidden="true" />
+      <div className="hero-overlay" aria-hidden="true" />
+
+      <div className="container hero-inner">
         <div className="hero-copy">
-          <p className="eyebrow">{business.studioName} · Bilaspur</p>
+          <p className="eyebrow">{hero.eyebrow}</p>
           <h1 className="hero-title">
-            Every bride, every face,
-            <br />
-            made <span className="hero-script">royal</span>.
+            {hero.title}
+            <span className="hero-script">{hero.script}</span>
           </h1>
-          <Ornament variant="line" />
-          <p className="hero-lede">{business.tagline}</p>
+
+          <p className="hero-tagline">{hero.tagline}</p>
+
           <div className="hero-actions">
-            <a
-              className="btn btn-solid"
+            
+            <a className="btn btn-solid"
               href={`https://wa.me/91${business.whatsapp}`}
               target="_blank"
               rel="noreferrer"
@@ -30,21 +33,19 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="hero-award">
-            <span className="hero-award-tag">Award-winning</span>
-            <span>
-              {award.title} — {award.event}
-            </span>
-          </div>
+          <p className="hero-award">
+            <span className="hero-award-tag">Award-Winning</span>
+            {award.title} — {award.event}
+          </p>
         </div>
 
-        <div className="hero-visual">
+        <div className="hero-frame-wrap">
           <div className="hero-frame">
-            <img src={portfolioShot} alt="Bridal makeup artistry by Renu Rani" />
+            <img src={ownerPhoto} alt={business.ownerName} />
           </div>
-          <div className="hero-frame-caption">
-            <span className="brand-script">RR</span>
-            <span>Studio &amp; Academy</span>
+          <div className="hero-badge">
+            <span className="hero-badge-initials">RR</span>
+            <span className="hero-badge-label">Studio &amp; Academy</span>
           </div>
         </div>
       </div>

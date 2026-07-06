@@ -1,14 +1,15 @@
 .appointment-form {
-  border: 1px solid var(--gold-dim);
-  background: linear-gradient(160deg, var(--ink-panel), var(--ink-soft));
-  padding: 36px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 36px;
+  box-shadow: 0 16px 40px rgba(43, 43, 43, 0.08);
 }
 
 .appointment-form-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .appointment-form-note {
@@ -23,22 +24,23 @@
 }
 
 .form-row label {
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--rose);
 }
 
 .form-row input,
 .form-row select,
 .form-row textarea {
-  background: var(--ink);
-  border: 1px solid var(--gold-dim);
-  color: var(--ivory);
+  width: 100%;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  color: var(--charcoal);
   padding: 12px 14px;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  border-radius: var(--radius);
+  border-radius: 6px;
   resize: vertical;
 }
 
@@ -46,11 +48,12 @@
 .form-row select:focus,
 .form-row textarea:focus {
   outline: none;
-  border-color: var(--gold);
+  border-color: var(--rose);
 }
 
 .appointment-form-submit {
-  margin-top: 8px;
+  margin-top: 6px;
   justify-content: center;
   border: none;
+  width: 100%;
 }
