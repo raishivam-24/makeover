@@ -20,25 +20,27 @@ import salonProductCounter from "../assets/images/salon-product-counter.jpg";
 import salonTrainingHeads from "../assets/images/salon-training-heads.jpg";
 import salonInterior3 from "../assets/images/salon-interior-3.jpg";
 import salonProductsShelf from "../assets/images/salon-products-shelf.jpg";
+
+// New portfolio photos
+import portfolioBridalGoddess1 from "../assets/images/portfolio-bridal-goddess-1.jpg";
+import portfolioCreativeKali1 from "../assets/images/portfolio-creative-kali-1.jpg";
+import portfolioMehendi1 from "../assets/images/portfolio-mehendi-1.jpg";
+import portfolioBridalLook3 from "../assets/images/portfolio-bridal-look-3.jpg";
+import portfolioClient1 from "../assets/images/portfolio-client-1.jpg";
+import portfolioClient2 from "../assets/images/portfolio-client-2.jpg";
+import portfolioBtsApplication from "../assets/images/portfolio-bts-application.jpg";
+
 import "../css/gallery.css";
 
 const categories = [
   {
     title: "Reception",
-    photos: [
-      ownerPhoto,
-      salonReception,
-      salonSignboard,
-    ],
+    photos: [ownerPhoto, salonReception, salonSignboard],
   },
 
   {
     title: "Salon Interior",
-    photos: [
-      salonInterior1,
-      salonInterior2,
-      salonInterior3,
-    ],
+    photos: [salonInterior1, salonInterior2, salonInterior3],
   },
 
   {
@@ -55,28 +57,17 @@ const categories = [
 
   {
     title: "Hair Care & Products",
-    photos: [
-      salonProductCounter,
-      salonProductDisplay,
-      salonProductsShelf,
-    ],
+    photos: [salonProductCounter, salonProductDisplay, salonProductsShelf],
   },
 
   {
     title: "Treatment Room",
-    photos: [
-      salonTreatmentRoom,
-      salonFullView,
-    ],
+    photos: [salonTreatmentRoom, salonFullView],
   },
 
   {
     title: "Bridal Collection",
-    photos: [
-      salonLehenga1,
-      salonLehenga2,
-      salonJewellery,
-    ],
+    photos: [salonLehenga1, salonLehenga2, salonJewellery],
   },
 
   {
@@ -84,6 +75,13 @@ const categories = [
     photos: [
       portfolioBridal2,
       portfolioBridal4,
+      portfolioBridalGoddess1,
+      portfolioCreativeKali1,
+      portfolioMehendi1,
+      portfolioBridalLook3,
+      portfolioClient1,
+      portfolioClient2,
+      portfolioBtsApplication,
     ],
   },
 ];
