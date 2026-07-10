@@ -58,6 +58,7 @@ export const services = [
   { title: "Hair Styling", image: "service-hair" },
   { title: "Party Look", image: "service-party" },
   { title: "Skin & Spa", image: "service-skin" },
+  { title: "Mehndi", image: "service-mehndi" },
 ];
 
 export const lehengaOffer = {
@@ -208,24 +209,30 @@ export const serviceCategories = [
       },
     ],
   },
+  // {
+  //   id: "spa-mani-pedi",
+  //   label: "Nails & Spa",
+  //   groups: [
+  //     {
+  //       title: "Hands & Feet",
+  //       items: [
+  //         { name: "Manicure", price: "600" },
+  //         { name: "Pedicure", price: "600" },
+  //       ],
+  //     },
+  //     {
+  //       title: "Massage",
+  //       items: [
+  //         { name: "Body Massage (Olive Oil)", price: "1500" },
+  //         { name: "Head Massage (Olive Oil)", price: "349" },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
-    id: "spa-mani-pedi",
-    label: "Nails & Spa",
-    groups: [
-      {
-        title: "Hands & Feet",
-        items: [
-          { name: "Manicure", price: "600" },
-          { name: "Pedicure", price: "600" },
-        ],
-      },
-      {
-        title: "Massage",
-        items: [
-          { name: "Body Massage (Olive Oil)", price: "1500" },
-          { name: "Head Massage (Olive Oil)", price: "349" },
-        ],
-      },
-    ],
+    id: "mehndi",
+    label: "Mehndi",
+    disabled: true,
+    groups: [],
   },
 ];

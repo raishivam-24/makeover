@@ -1,6 +1,7 @@
 import "./css/variables.css";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
+import PressHighlight from "./components/PressHighlight.jsx";
 import AwardStrip from "./components/AwardStrip.jsx";
 import About from "./components/About.jsx";
 import Offers from "./components/Offers.jsx";
@@ -19,6 +20,7 @@ export default function App() {
       <main>
         <Hero />
         <AwardStrip />
+        <PressHighlight />
         <Offers />
         <Services />
         <About />

@@ -1,5 +1,5 @@
-import grandOpeningPoster from "../assets/images/poster-grand-opening.jpg";
-import haircutOfferPoster from "../assets/images/poster-haircut-offer.jpg";
+import academyCoursePoster from "../assets/images/poster-academy-course.jpg";
+import grandOpeningOfferPoster from "../assets/images/poster-grand-opening-offer.jpg";
 import lehengaCollection from "../assets/images/salon-lehenga-2.jpg";
 import PageHeader from "./PageHeader.jsx";
 import Poster from "./Poster.jsx";
@@ -12,20 +12,20 @@ export default function Offers() {
       <PageHeader
         eyebrow="Current Offers"
         title="Limited-Time Deals"
-        lede="Grand opening pricing on hair treatments, a flat-rate haircut offer, and three ready-made service packages."
+        lede="Grand opening pricing on salon services, and a 15-day professional makeup & hairstyle course."
       />
 
       <div className="container">
         <div className="offers-grid">
           <Poster
-            src={grandOpeningPoster}
-            alt="Grand Opening Offer — any hair length just ₹2999, choose any one hair treatment"
-            caption="Grand Opening Offer — tap to view full size"
+            src={academyCoursePoster}
+            alt="RR Makeup Studio and Academy — 15 Days Basic to Advance Professional Makeup & Hairstyle Class"
+            caption="15-Day Makeup & Hairstyle Course — tap to view full size"
           />
           <Poster
-            src={haircutOfferPoster}
-            alt="Hair cut offer ₹99 and Silver, Gold, Diamond package pricing with Renu Rani"
-            caption="Haircut & Packages — tap to view full size"
+            src={grandOpeningOfferPoster}
+            alt="RR Makeup Studio Grand Opening Offer — flat 25% off, hair treatment ₹2999, bring your bestie 30% off, beauty combo ₹1999"
+            caption="Grand Opening Offer — tap to view full size"
           />
         </div>
 

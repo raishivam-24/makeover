@@ -3,6 +3,7 @@ import serviceBridal from "../assets/images/service-bridal.jpg";
 import serviceHair from "../assets/images/service-hair.jpg";
 import serviceParty from "../assets/images/service-party.jpg";
 import serviceSkin from "../assets/images/service-skin.jpg";
+import serviceMehndi from "../assets/images/service-mehndi.jpg";
 import priceListPoster from "../assets/images/poster-price-list.jpg";
 import Poster from "./Poster.jsx";
 import { services, serviceCategories } from "../data/siteData.js";
@@ -13,6 +14,7 @@ const IMAGE_MAP = {
   "service-hair": serviceHair,
   "service-party": serviceParty,
   "service-skin": serviceSkin,
+  "service-mehndi": serviceMehndi,
 };
 
 export default function Services() {
@@ -50,8 +52,14 @@ export default function Services() {
               key={cat.id}
               role="tab"
               aria-selected={cat.id === activeId}
-              className={`price-tab-btn ${cat.id === activeId ? "is-active" : ""}`}
-              onClick={() => setActiveId(cat.id)}
+              aria-disabled={cat.disabled || undefined}
+              className={`price-tab-btn ${cat.id === activeId ? "is-active" : ""} ${
+                cat.disabled ? "is-disabled" : ""
+              }`}
+              onClick={() => {
+                if (cat.disabled) return;
+                setActiveId(cat.id);
+              }}
             >
               {cat.label}
             </button>
