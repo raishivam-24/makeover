@@ -7,6 +7,7 @@ import About from "./components/About.jsx";
 import Offers from "./components/Offers.jsx";
 import Services from "./components/Services.jsx";
 import Gallery from "./components/Gallery.jsx";
+import SocialFeed from "./components/SocialFeed.jsx";
 import Reviews from "./components/Reviews.jsx";
 import PageHeader from "./components/PageHeader.jsx";
 import CtaBanner from "./components/CtaBanner.jsx";
@@ -25,6 +26,7 @@ export default function App() {
         <Services />
         <About />
         <Gallery />
+        <SocialFeed />
         {/* <Reviews /> */}
 
         <CtaBanner
