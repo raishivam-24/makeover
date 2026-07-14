@@ -4,7 +4,8 @@ import { contact } from "../data/contact.js";
 import "../css/contact.css";
 
 export default function ContactLocation() {
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(contact.mapsQuery)}&output=embed`;
+  const mapSrc =
+  "https://www.google.com/maps?q=22.0710402,82.1597024&z=17&output=embed";
 
   return (
     <section className="contact">
@@ -35,24 +36,22 @@ export default function ContactLocation() {
                 <a href={business.instagram} target="_blank" rel="noreferrer" className="contact-link">
                   @makeover_by_renurani
                 </a>
-                <a
-                  href={contact.instagramSecondary.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="contact-link contact-link-secondary"
-                >
-                  @{contact.instagramSecondary.handle} — {contact.instagramSecondary.label}
-                </a>
               </dd>
             </div>
             <div className="contact-row">
               <dt>Hours</dt>
-              <dd className="placeholder-note">Add business hours here</dd>
+              <dd className="contact-hours">
+                {contact.hours.map((h) => (
+                  <span className="contact-hours-line" key={h.day}>
+                    <strong>{h.day}:</strong> {h.time}
+                  </span>
+                ))}
+              </dd>
             </div>
           </dl>
 
-          <a
-            className="btn btn-solid contact-cta"
+          
+          <a className="btn btn-solid contact-cta"
             href={`https://wa.me/91${business.whatsapp}`}
             target="_blank"
             rel="noreferrer"
@@ -67,6 +66,14 @@ export default function ContactLocation() {
       <div className="container">
         <div className="contact-map">
           <iframe title="RR Makeup Studio & Academy location" src={mapSrc} loading="lazy" />
+          
+          <a href="https://maps.app.goo.gl/MwNWiF4PzuEiDx3h6?g_st=ac"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-map-link"
+          >
+            Open in Google Maps →
+          </a>
         </div>
       </div>
     </section>

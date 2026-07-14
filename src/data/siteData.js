@@ -236,3 +236,19 @@ export const serviceCategories = [
     groups: [],
   },
 ];
+export const footerInfo = {
+  address: "CMD Chowk, Bilaspur, Vidya Nagar, Chhattisgarh 495001",
+  mapsUrl: "https://maps.app.goo.gl/MwNWiF4PzuEiDx3h6?g_st=ac",
+  email: "rrmakeuostudio1@gmail.com",
+  instagram: "https://www.instagram.com/makeover_by_renurani",
+  youtube: "https://youtube.com/@rrmakeover_4?si=SWjv2rUBEdScX5hm",
+  hours: [
+    { day: "Sunday", time: "10 am – 8 pm" },
+    { day: "Monday", time: "10 am – 8 pm" },
+    { day: "Tuesday", time: "Closed" },
+    { day: "Wednesday", time: "10 am – 8 pm" },
+    { day: "Thursday", time: "10 am – 8 pm" },
+    { day: "Friday", time: "10 am – 8 pm" },
+    { day: "Saturday", time: "10 am – 8 pm" },
+  ],
+};
